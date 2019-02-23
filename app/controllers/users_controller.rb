@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def user_not_authorized
     flash[:alert] = "Access denied."
+    byebug
     redirect_to(request.referrer || root_path)
   end
 end

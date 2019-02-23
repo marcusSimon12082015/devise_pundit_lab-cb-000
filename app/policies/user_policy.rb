@@ -4,6 +4,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def show?
+    byebug
     user.admin? || record.id == user.id
   end
 end

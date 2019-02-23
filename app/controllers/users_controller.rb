@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     if user_signed_in?
-      @user = authorize User.find_by(current_user.id)
+      @user = authorize User.find_by(params[:id].to_i)
     end
   end
 end

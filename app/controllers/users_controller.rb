@@ -10,11 +10,5 @@ class UsersController < ApplicationController
       @user = authorize User.find_by(current_user.id)
     end
   end
-
-  private
-
-  def user_not_authorized
-    flash[:alert] = "Access denied."
-    redirect_to(request.referrer || root_path)
-  end
+  
 end

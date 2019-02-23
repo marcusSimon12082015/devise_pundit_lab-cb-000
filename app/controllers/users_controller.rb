@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     if user_signed_in?
-      @user = authorize User.find_by(current_user.id)
+      @user = authorize User.find(current_user.id)
     end
   end
 

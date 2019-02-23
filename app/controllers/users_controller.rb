@@ -11,13 +11,4 @@ class UsersController < ApplicationController
       byebug
     end
   end
-
-  private
-
-  def user_not_authorized
-    byebug
-    flash[:alert] = "Access denied."
-    redirect_to(request.referrer || root_path)
-  end
-
 end

@@ -45,7 +45,7 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'high_voltage'
 gem 'pundit'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 
 group :development do
   gem 'better_errors'
@@ -57,7 +57,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
 end

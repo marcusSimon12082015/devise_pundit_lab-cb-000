@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   def show
     if user_signed_in?
       @user = authorize User.find_by(current_user.id)
-      byebug
     end
   end
 end

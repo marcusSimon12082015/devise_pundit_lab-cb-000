@@ -10,5 +10,5 @@ class UsersController < ApplicationController
       @user = authorize User.find_by(current_user.id)
     end
   end
-  
+
 end

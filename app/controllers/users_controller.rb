@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-
-  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-
   def index
     if user_signed_in?
       @user = authorize User.find_by(current_user.id)
